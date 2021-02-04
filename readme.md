@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Augusto Rossetti Lorea</h1>
 <h3 align="center">A passionate frontend developer from argentina</h3>
 
-- 🔭 I’m currently study Js [toDoList](https://augusto-rossetti.000webhostapp.com/)
+- 🔭 I’m currently study Js [toDoList](https://augusto-rossetti-lorea.000webhostapp.com/)
 
 <h3 align="center">Connect with me:</h3>
 <p align="center">
