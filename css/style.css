@@ -1,0 +1,45 @@
+header {
+  background-color: black;
+  height: 70px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.tools-card {
+  padding: 20px;
+  height: 610px;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+}
+.tools-card .tools-card-maker {
+  margin-bottom: 20px;
+  padding: 15px;
+  height: 200px;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.tools-card .tools-card-maker input, .tools-card .tools-card-maker select {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 80%;
+}
+.tools-card .tools-card-maker .tools-card-maker-boton {
+  float: right;
+}
+
+.info-card {
+  margin-bottom: 10px;
+  padding: 15px;
+  height: 300px;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+}
+.info-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*# sourceMappingURL=style.css.map */
