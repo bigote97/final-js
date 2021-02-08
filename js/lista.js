@@ -20,17 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 crearItem.addEventListener('click', function(){
-  setItems()
-})
-document.querySelector('#inputItem').addEventListener("keydown", function(event) {
-  if (event.keyCode === 13){
-    event.preventDefault();
-    setItems();
-  }
-})
 
-
-function setItems() {
   let item = document.querySelector('#inputItem').value;
   if (item === ''){  
     return
@@ -43,7 +33,7 @@ function setItems() {
     listaItems.appendChild(mostrar);
     document.querySelector('#inputItem').value = '';
   }
-}
+})
 
 boton.addEventListener('click', function () {
   const nombre = document.querySelector('#inputTitulo').value;
