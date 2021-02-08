@@ -9,10 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function peticion(){
   $.ajax({
-    url: 'https://api.exchangerate-api.com/v4/latest/USD',
+    url: 'https://api.exchangerate-api.com/v4/latest/ARS',
     success: function (data, status, JQxhr) {
       dolar = data;
       console.log(dolar);
+      const infoDolar = document.querySelector('#infoDolar');
+      const p = document.createElement('p');
+      p.innerHTML = `
+        <p>
+          Valores consultados en <a href="https://api.exchangerate-api.com">https://api.exchangerate-api.comgit</a> y actualizados a las ${dolar.time_last_updated}
+        </p>
+      `
+      infoDolar.appendChild(p);
 
     },
     error: function (JQxhr, status, errorThrown) {
@@ -24,10 +32,10 @@ function peticion(){
 }
 
 inputDolar.addEventListener('input', function() {
-  calcular(inputDolar.value, '*', '#inputPesos');
+  calcular(inputDolar.value, '/', '#inputPesos');
 })
 inputPesos.addEventListener('input', function() {
-  calcular(inputPesos.value, '/', '#inputDolar');
+  calcular(inputPesos.value, '*', '#inputDolar');
 })
 
 function calcular(valor, operacion,salida) {
@@ -38,16 +46,17 @@ function calcular(valor, operacion,salida) {
     } else {
       let resultado = Number;
       if (operacion === '/') {
-        resultado = valor / dolar.rates.ARS;
+        resultado = valor / dolar.rates.USD;
       } else if (operacion === '*') {
-        resultado = valor * dolar.rates.ARS;
+        resultado = valor * dolar.rates.USD;
       }
 
-      if (resultado !== 0) {
+      if (resultado >= 1) {
         document.querySelector(salida).value = resultado.toFixed(2);
+      } else if (resultado < 1 && resultado >= 0) {
+        document.querySelector(salida).value = resultado.toFixed(4);
       } else {
-        document.querySelector(salida).value = 'U$';
+        document.querySelector(salida).value = '';
       }
     }
-     
 }
