@@ -20,17 +20,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 crearItem.addEventListener('click', function(){
-  let item = document.querySelector('#inputItem').value;
-  items.push(item);
-  const mostrar = document.createElement('ul');
-  mostrar.innerHTML=`
-    <li>
-      ${item}
-    </li>
-  `
-  listaItems.appendChild(mostrar);
-  document.querySelector('#inputItem').value = '';
+  setItems()
 })
+document.querySelector('#inputItem').addEventListener("keydown", function(event) {
+  if (event.keyCode === 13){
+    event.preventDefault();
+    setItems();
+  }
+})
+
+
+function setItems() {
+  let item = document.querySelector('#inputItem').value;
+  if (item === ''){  
+    return
+  } else {
+    items.push(item);
+    const mostrar = document.createElement('li');
+    mostrar.innerHTML=`
+      ${item}
+    `
+    listaItems.appendChild(mostrar);
+    document.querySelector('#inputItem').value = '';
+  }
+}
 
 boton.addEventListener('click', function () {
   const nombre = document.querySelector('#inputTitulo').value;
@@ -43,6 +56,10 @@ boton.addEventListener('click', function () {
   document.querySelector('#inputItem').value = '';
   document.querySelector('#inputTitulo').value = '';
 })
+
+function setItems (){
+  
+}
 
 function set(name, tipo, item) {
   if (name === '') {
@@ -95,15 +112,12 @@ botonBorrar.addEventListener('click', function () {
 })
 
 function borrarCard(id) {
-  console.log(lista)
-  console.log(id)
   const concat = '#' + id;
   const pos = document.querySelector(concat).parentNode.id;
   lista.splice(pos, 1);
   listaJSON = JSON.stringify(lista);
   localStorage.setItem('listaJSON', listaJSON);
   show();
-  console.log(lista)
 }
 
 

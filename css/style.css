@@ -1,3 +1,9 @@
+button {
+  border-radius: 5px;
+  box-shadow: none;
+  border: 1px solid;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -55,7 +61,11 @@ header a:hover {
   bottom: 15px;
   right: 15px;
 }
+.tools-card .tools-card-maker .tools-card-maker-list {
+  margin-bottom: 40px;
+}
 .tools-card .tools-card-dolar {
+  margin-bottom: 15px;
   position: relative;
   margin-bottom: 30px;
   padding: 15px;
@@ -79,7 +89,7 @@ header a:hover {
   bottom: 15px;
   left: 15px;
   width: 90%;
-  background-color: red;
+  background-color: red !important;
   text-transform: uppercase;
 }
 

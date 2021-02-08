@@ -1,4 +1,7 @@
+
 @import "tarjetas";
+@import "botones";
+
 header{
   display: flex;
   justify-content: space-between;
@@ -32,8 +35,12 @@ header{
       bottom: 15px;
       right: 15px; 
     }
+    .tools-card-maker-list{
+      margin-bottom: 40px;
+    }
   }
   .tools-card-dolar{
+    margin-bottom: 15px;
     @include tarjeta(200px, 80%, 15px, 30px, 40%);
     .tools-card-dolar-boton{
       position: absolute;
@@ -46,7 +53,7 @@ header{
     bottom: 15px;
     left: 15px;
     width: 90%;
-    background-color: red;
+    background-color: red !important;
     text-transform: uppercase;
   }
 }
