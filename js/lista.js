@@ -9,6 +9,7 @@ const boton = document.querySelector('#crearLista');
 const crearItem = document.querySelector('#crearItem');
 const botonBorrar = document.querySelector('#botonBorrar');
 
+let items = [];
 let lista = [];
 
 
@@ -17,19 +18,22 @@ document.addEventListener('DOMContentLoaded', () => {
   show();
 });
 
+
+crearItem.addEventListener('click', function(){
+  let item = document.querySelector('#inputItem').value;
+  items.push(item);
+  item = '';
+})
+
 boton.addEventListener('click', function () {
   const nombre = document.querySelector('#inputTitulo').value;
-  const tipo = document.querySelector('#inputTipo').value;
-  let items = [];
-  crearItem.addEventListener('click', function(){
-    const item = document.querySelector('#inputItem').value;
-    items.push(item);
-  })
+  const tipo = document.querySelector('#inputTipo').value;  
   set(nombre, tipo, items);
+  items = [];
 })
 
 function set(name, tipo, item) {
-  if (name === '' && item === '') {
+  if (name === '') {
     return
   } else {
     nuevoElemento = new elemento(name, tipo, item);
@@ -42,31 +46,30 @@ function set(name, tipo, item) {
 
 function show(){
   limpiarLista();
-  lista.forEach(element =>{
+  lista.forEach(function callback(element, index){
     const card = document.createElement('div');
     card.classList.add('col-sm-12', 'col-md-6', 'col-lg-3', 'col-xl-3');
     card.innerHTML = `
       <div class="info-card">
         <h3>${element.nombre}</h3>
-        <div id="items"></div>
-        <ul>
-          <li>${element.items}</li>
-        </ul>
+        <ul id="itemsCard${index}"></ul>
       </div>
     `
     contenedorLista.appendChild(card);
-    element.items.forEach(item =>{
-      const nuevoItem = document.createElement('ul');
-      nuevoItem.innerHTML = `
-        <li>${item}</li>
+    let concat = '#itemsCard' + index;
+    const itemsCard = document.querySelector(concat)
+    element.items.forEach( item =>{
+      const ul = document.createElement('li');
+      ul.innerHTML = `
+        ${item}
       `
-      card.appendChild(nuevoItem);
+      itemsCard.appendChild(ul)
     })
   });
 };
 
+
 function limpiarLista() {
-  // contenedorCarrito.innerHTML = '';
 	while (contenedorLista.firstChild) {
     contenedorLista.removeChild(contenedorLista.firstChild);
   }

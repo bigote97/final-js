@@ -15,9 +15,10 @@ function peticion(){
       console.log(dolar);
       const infoDolar = document.querySelector('#infoDolar');
       const p = document.createElement('p');
+      const actualizacion = dolar.date;
       p.innerHTML = `
         <p>
-          Valores consultados en <a href="https://api.exchangerate-api.com">https://api.exchangerate-api.comgit</a> y actualizados a las ${dolar.time_last_updated}
+          Valores consultados en <a href="https://api.exchangerate-api.com">https://api.exchangerate-api.comgit</a> y actualizado: ${actualizacion}
         </p>
       `
       infoDolar.appendChild(p);
