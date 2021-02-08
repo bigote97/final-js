@@ -8,7 +8,7 @@ const contenedorLista = document.querySelector('#lista');
 const boton = document.querySelector('#crearLista');
 const crearItem = document.querySelector('#crearItem');
 const botonBorrar = document.querySelector('#botonBorrar');
-
+const listaItems = document.querySelector('#listaItems');
 let items = [];
 let lista = [];
 
@@ -22,14 +22,26 @@ document.addEventListener('DOMContentLoaded', () => {
 crearItem.addEventListener('click', function(){
   let item = document.querySelector('#inputItem').value;
   items.push(item);
-  item = '';
+  const mostrar = document.createElement('ul');
+  mostrar.innerHTML=`
+    <li>
+      ${item}
+    </li>
+  `
+  listaItems.appendChild(mostrar);
+  document.querySelector('#inputItem').value = '';
 })
 
 boton.addEventListener('click', function () {
   const nombre = document.querySelector('#inputTitulo').value;
   const tipo = document.querySelector('#inputTipo').value;  
   set(nombre, tipo, items);
+  while (listaItems.firstChild) {
+    listaItems.removeChild(listaItems.firstChild);
+  };
   items = [];
+  document.querySelector('#inputItem').value = '';
+  document.querySelector('#inputTitulo').value = '';
 })
 
 function set(name, tipo, item) {
@@ -50,9 +62,12 @@ function show(){
     const card = document.createElement('div');
     card.classList.add('col-sm-12', 'col-md-6', 'col-lg-3', 'col-xl-3');
     card.innerHTML = `
-      <div class="info-card">
-        <h3>${element.nombre}</h3>
-        <ul id="itemsCard${index}"></ul>
+      <div class="info-card" id="${index}">
+        <div>
+          <h3>${element.nombre}</h3>
+          <ul id="itemsCard${index}"></ul>
+        </div>
+        <button class="eliminaCard" id="btnCard${index}" onclick="borrarCard(id)">X</button>
       </div>
     `
     contenedorLista.appendChild(card);
@@ -78,6 +93,21 @@ function limpiarLista() {
 botonBorrar.addEventListener('click', function () {
   borrarLista()
 })
+
+function borrarCard(id) {
+  console.log(lista)
+  console.log(id)
+  const concat = '#' + id;
+  const pos = document.querySelector(concat).parentNode.id;
+  lista.splice(pos, 1);
+  listaJSON = JSON.stringify(lista);
+  localStorage.setItem('listaJSON', listaJSON);
+  show();
+  console.log(lista)
+}
+
+
+
 
 function borrarLista() {  
   while (contenedorLista.firstChild) {
