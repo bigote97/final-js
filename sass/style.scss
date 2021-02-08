@@ -1,3 +1,4 @@
+@import "tarjetas";
 header{
   background-color: black;
   height: 70px;
@@ -5,36 +6,38 @@ header{
   margin-bottom: 15px;
 }
 .tools-card{
-  padding: 20px;
-  height: 610px;
-  width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include tarjeta(610px, 100%, 20px, 0, 80%);
   .tools-card-maker{
-    margin-bottom: 20px;
-    padding: 15px;
-    height: 200px;
-    width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    input, select{
-      margin-bottom: 10px;
-      border-radius: 5px;
-      width: 80%;
-    }
+    @include tarjeta(200px, 80%, 15px, 30px, 80%);
     .tools-card-maker-boton{
-      float: right; 
+      position: absolute;
+      bottom: 15px;
+      right: 15px; 
     }
   }
+  .tools-card-dolar{
+    @include tarjeta(200px, 80%, 15px, 30px, 40%);
+    .tools-card-dolar-boton{
+      position: absolute;
+      bottom: 15px;
+      right: 15px; 
+    }
+  }
+  .tools-card-btn-borrar{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    width: 90%;
+    background-color: red;
+    text-transform: uppercase;
+  }
 }
+
 .info-card{
-  margin-bottom: 10px;
-  padding: 15px;
-  height: 300px;
-  width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 100%;
+  @include tarjeta(300px, 100%, 15px, 10px, 0);
   &:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }

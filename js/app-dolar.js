@@ -1,5 +1,7 @@
 const calcularDolar = document.querySelector('#calcularDolar');
+const inputPesos = document.querySelector('#inputPesos');
 const inputDolar = document.querySelector('#inputDolar');
+
 
 document.addEventListener('DOMContentLoaded', () => {
   peticion();
@@ -21,36 +23,31 @@ function peticion(){
   });
 }
 
-calcularDolar.addEventListener('click', function() {
-  const pesos = document.querySelector('#inputDolar').value;
-  if (isNaN(pesos)) {
-    showDolar('calcularDolar', 'solo numeros')
-    return
-  }
-  showDolar('calcularDolar', 'solo numeros')
-  const resultado = pesos * dolar.rates.ARS;
-  if (resultado !== 0) {
-    showDolar('calcularDolar', resultado.toFixed(2))
-  } else {
-    showDolar('calcularDolar', 'calcular')
-  }
+inputDolar.addEventListener('input', function() {
+  calcular(inputDolar.value, '*', '#inputPesos');
+})
+inputPesos.addEventListener('input', function() {
+  calcular(inputPesos.value, '/', '#inputDolar');
 })
 
-function showDolar(buttonId, text){
-  if (document.getElementById)
-  {
-    var button=document.getElementById(buttonId);
-    if (button)
-    {
-      if (button.childNodes[0]){
-        button.childNodes[0].nodeValue = text;
+function calcular(valor, operacion,salida) {
+    if (isNaN(valor)) {
+      console.log('isNaN')
+      document.querySelector(salida).value = ''
+      return
+    } else {
+      let resultado = Number;
+      if (operacion === '/') {
+        resultado = valor / dolar.rates.ARS;
+      } else if (operacion === '*') {
+        resultado = valor * dolar.rates.ARS;
       }
-      else if (button.value){
-        button.value = text;
-      }
-      else{
-        button.innerHTML = text;
+
+      if (resultado !== 0) {
+        document.querySelector(salida).value = resultado.toFixed(2);
+      } else {
+        document.querySelector(salida).value = 'U$';
       }
     }
-  }
+     
 }

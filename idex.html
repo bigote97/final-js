@@ -17,8 +17,8 @@
       <section class="row">
         <aside class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
           <div class="tools-card">
-            <h3>Herramientas</h3>
-            <h2>Crear nueva tarjeta:</h2>
+            <h2>Herramientas</h2>
+            <h4>Crear nueva tarjeta:</h4>
             <div class="tools-card-maker">
               <input type="text" placeholder="Titulo de la tarjeta" id="inputTitulo">
               <select name="tipo" placeholder="Tipo de tarjeta" id="inputTipo">
@@ -28,10 +28,15 @@
               <input type="text" placeholder="items" id="inputItem">
               <button id="crearItem">+</button>
               <button class="tools-card-maker-boton" id="crearLista">Crear tarjeta</button>
-              <button id="botonBorrar">eliminar todo</button>  
+                
             </div>
-            <input type="text" placeholder="Valor dolar" id="inputDolar">
-            <button id="calcularDolar">calcular</button>
+            <div class="tools-card-dolar">
+              <h4>conversor</h4>
+              <input type="text" placeholder="$ARS" id="inputPesos">
+              <span> = </span>
+              <input type="text" placeholder="U$" id="inputDolar">
+            </div>
+            <button id="botonBorrar" class="tools-card-btn-borrar">eliminar todo</button>
           </div>
         </aside>
         <section class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
@@ -39,7 +44,7 @@
             
           </div>
         </div>
-      </section>
+      </section> 
     </section>
   </main>
   
