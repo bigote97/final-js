@@ -1,7 +1,8 @@
 button {
   border-radius: 5px;
   box-shadow: none;
-  border: 1px solid;
+  border: 0.8px solid;
+  background-color: #FFFFFF;
 }
 
 header {
@@ -95,6 +96,7 @@ header a:hover {
 
 .info-card {
   position: relative;
+  position: relative;
   margin-bottom: 10px;
   padding: 15px;
   min-height: 300px;
@@ -106,6 +108,11 @@ header a:hover {
   margin-bottom: 10px;
   border-radius: 5px;
   width: 0;
+}
+.info-card .eliminaCard {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
 }
 .info-card:hover {
   box-shadow: 8px 4px 8px 4px rgba(0, 0, 0, 0.4);

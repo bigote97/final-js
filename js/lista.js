@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 crearItem.addEventListener('click', function(){
-
   let item = document.querySelector('#inputItem').value;
   if (item === ''){  
     return
@@ -47,9 +46,6 @@ boton.addEventListener('click', function () {
   document.querySelector('#inputTitulo').value = '';
 })
 
-function setItems (){
-  
-}
 
 function set(name, tipo, item) {
   if (name === '') {
@@ -68,15 +64,28 @@ function show(){
   lista.forEach(function callback(element, index){
     const card = document.createElement('div');
     card.classList.add('col-sm-12', 'col-md-6', 'col-lg-3', 'col-xl-3');
-    card.innerHTML = `
+    
+    if (element.tipo === '0'){
+      card.innerHTML = `
       <div class="info-card" id="${index}">
-        <div>
-          <h3>${element.nombre}</h3>
-          <ul id="itemsCard${index}"></ul>
-        </div>
-        <button class="eliminaCard" id="btnCard${index}" onclick="borrarCard(id)">X</button>
+      <div>
+      <h3>${element.nombre}</h3>
+      <ol id="itemsCard${index}"></ol>
       </div>
-    `
+      <button class="eliminaCard" id="btnCard${index}" onclick="borrarCard(id)"><img src="icons/trash.svg" /></button>
+      </div>
+      `
+    } else if (element.tipo === '1'){
+      card.innerHTML = `
+      <div class="info-card" id="${index}">
+      <div>
+      <h3>${element.nombre}</h3>
+      <ul id="itemsCard${index}"></ul>
+      </div>
+      <button class="eliminaCard" id="btnCard${index}" onclick="borrarCard(id)"><img src="icons/trash.svg" alt="eliminar tarjeta"/></button>
+      </div>
+      `
+    }
     contenedorLista.appendChild(card);
     let concat = '#itemsCard' + index;
     const itemsCard = document.querySelector(concat)
