@@ -19,8 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
   show();
 });
 
+document.querySelector('#inputItem').addEventListener('keydown', function (e) {
+  if (e.key === 'Enter') {
+    inputItems();
+  }
+})
 
 crearItem.addEventListener('click', function(){
+  inputItems();
+})
+
+function inputItems() {
   let item = document.querySelector('#inputItem').value;
   if (item === ''){  
     return
@@ -33,9 +42,26 @@ crearItem.addEventListener('click', function(){
     listaItems.appendChild(mostrar);
     document.querySelector('#inputItem').value = '';
   }
-})
+}
+
+
 
 boton.addEventListener('click', function () {
+  crearLista();
+})
+
+document.querySelector('#inputTitulo').addEventListener('keydown', function (e) {
+  if (e.key === 'Enter') {
+    document.querySelector('#inputTipo').focus();
+  }
+})
+document.querySelector('#inputTipo').addEventListener('keydown', function (e) {
+  if (e.key === 'Enter') {
+    document.querySelector('#inputItem').focus();
+  }
+})
+
+function crearLista(){
   const nombre = document.querySelector('#inputTitulo').value;
   const tipo = document.querySelector('#inputTipo').value;  
   set(nombre, tipo, items);
@@ -45,8 +71,7 @@ boton.addEventListener('click', function () {
   items = [];
   document.querySelector('#inputItem').value = '';
   document.querySelector('#inputTitulo').value = '';
-})
-
+}
 
 function set(name, tipo, item) {
   if (name === '') {
