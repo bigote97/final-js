@@ -6,7 +6,10 @@
   Esta APP es un bloc de notas personales, donde se pueden crear notas con items ordenados o desordenados. Para realizar el consumo de una API implemente un conversor de monedas (de U$ a AR$), estos consultan a una api publica que retorna un objeto con los valores actuales de cada moneda
 </p>
 
-- 💻📲 enlace a la aplicacion: [toDoList](https://augusto-rossetti-lorea.000webhostapp.com/)
+<!-- - 💻📲 enlace a la aplicacion: [toDoList](https://augusto-rossetti-lorea.000webhostapp.com/) -->
+
+- 💻📲 enlace a la aplicacion: [toDoList](https://bigote97.github.io/final-js/)
+
 
 <h3 align="center">Lenguajes y herramientas utilizados:</h3>
 <p align="center">

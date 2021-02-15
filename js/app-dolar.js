@@ -40,7 +40,6 @@ inputPesos.addEventListener('input', function() {
 
 function calcular(valor, operacion,salida) {
     if (isNaN(valor)) {
-      console.log('isNaN')
       document.querySelector(salida).value = ''
       return
     } else {

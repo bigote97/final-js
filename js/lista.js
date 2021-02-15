@@ -14,6 +14,7 @@ let lista = [];
 
 
 document.addEventListener('DOMContentLoaded', () => {
+  
   lista = JSON.parse(localStorage.getItem('listaJSON')) || [];
   show();
 });
@@ -88,7 +89,7 @@ function show(){
     }
     contenedorLista.appendChild(card);
     let concat = '#itemsCard' + index;
-    const itemsCard = document.querySelector(concat)
+    const itemsCard = document.querySelector(concat);
     element.items.forEach( item =>{
       const ul = document.createElement('li');
       ul.innerHTML = `
