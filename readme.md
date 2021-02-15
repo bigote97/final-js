@@ -3,10 +3,10 @@
 <p>
   En este repositorio encontras la aplicacion web que estoy desarrollando en el curso de JavaScript dictado por Coderhouse.
   <br>
-  Esta APP es un bloc de notas personales, donde se pueden crear notas con items ordenados o desordenados. Para realizar el consumio de una API implemente un conversor de monedas (de U$ a AR$), estos consultan a una api publica que retorna un objeto con los valores actuales de cada moneda
+  Esta APP es un bloc de notas personales, donde se pueden crear notas con items ordenados o desordenados. Para realizar el consumo de una API implemente un conversor de monedas (de U$ a AR$), estos consultan a una api publica que retorna un objeto con los valores actuales de cada moneda
 </p>
 
-- 🔭 enlace a la aplicacion: [toDoList](https://augusto-rossetti-lorea.000webhostapp.com/)
+- 💻📲 enlace a la aplicacion: [toDoList](https://augusto-rossetti-lorea.000webhostapp.com/)
 
 <h3 align="center">Lenguajes y herramientas utilizados:</h3>
 <p align="center">
@@ -31,7 +31,7 @@
 </p>
  
 
-<h3 align="center">Connect with me:</h3>
+<h3 align="center">Contactame:</h3>
 <p align="center">
 <a href="https://codepen.io/bigote97" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/codepen.svg" alt="bigote97" height="30" width="40" /></a>
 <a href="https://twitter.com/augusdrc" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="augusdrc" height="30" width="40" /></a>
