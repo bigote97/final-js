@@ -1,18 +1,14 @@
-<h1 align="center">Hi 👋, I'm Augusto Rossetti Lorea</h1>
-<h3 align="center">A passionate frontend developer from argentina</h3>
-
-- 🔭 I’m currently study Js [toDoList](https://augusto-rossetti-lorea.000webhostapp.com/)
-
-<h3 align="center">Connect with me:</h3>
-<p align="center">
-<a href="https://codepen.io/bigote97" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/codepen.svg" alt="bigote97" height="30" width="40" /></a>
-<a href="https://twitter.com/augusdrc" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="augusdrc" height="30" width="40" /></a>
-<a href="https://www.linkedin.com/in/augusto-rossetti-lorea-175622195/" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="https://www.linkedin.com/in/augusto-rossetti-lorea-175622195/" height="30" width="40" /></a>
-<a href="https://stackoverflow.com/users/15037995/augusto-rossetti-lorea" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/stackoverflow.svg" alt="https://stackoverflow.com/users/15037995/augusto-rossetti-lorea" height="30" width="40" /></a>
-<a href="https://discord.gg/augusto_rossetti_lorea#9624" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/discord.svg" alt="augusto_rossetti_lorea" height="30" width="40" /></a>
+<h1 align="center">Hola 👋, yo soy Augusto Rossetti Lorea</h1>
+<h3 align="center">Un apasianado desarrollador argentino</h3>
+<p>
+  En este repositorio encontras la aplicacion web que estoy desarrollando en el curso de JavaScript dictado por Coderhouse.
+  <br>
+  Esta APP es un bloc de notas personales, donde se pueden crear notas con items ordenados o desordenados. Para realizar el consumio de una API implemente un conversor de monedas (de U$ a AR$), estos consultan a una api publica que retorna un objeto con los valores actuales de cada moneda
 </p>
 
-<h3 align="center">Languages and Tools:</h3>
+- 🔭 enlace a la aplicacion: [toDoList](https://augusto-rossetti-lorea.000webhostapp.com/)
+
+<h3 align="center">Lenguajes y herramientas utilizados:</h3>
 <p align="center">
   <a href="https://www.w3.org/html/" target="_blank"> 
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> 
@@ -34,3 +30,13 @@
   </a> 
 </p>
  
+
+<h3 align="center">Connect with me:</h3>
+<p align="center">
+<a href="https://codepen.io/bigote97" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/codepen.svg" alt="bigote97" height="30" width="40" /></a>
+<a href="https://twitter.com/augusdrc" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="augusdrc" height="30" width="40" /></a>
+<a href="https://www.linkedin.com/in/augusto-rossetti-lorea-175622195/" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="https://www.linkedin.com/in/augusto-rossetti-lorea-175622195/" height="30" width="40" /></a>
+<a href="https://stackoverflow.com/users/15037995/augusto-rossetti-lorea" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/stackoverflow.svg" alt="https://stackoverflow.com/users/15037995/augusto-rossetti-lorea" height="30" width="40" /></a>
+<a href="https://discord.gg/augusto_rossetti_lorea#9624" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/discord.svg" alt="augusto_rossetti_lorea" height="30" width="40" /></a>
+</p>
+
