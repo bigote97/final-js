@@ -12,7 +12,6 @@ function peticion(){
     url: 'https://api.exchangerate-api.com/v4/latest/ARS',
     success: function (data, status, JQxhr) {
       dolar = data;
-      console.log(dolar);
       const infoDolar = document.querySelector('#infoDolar');
       const p = document.createElement('p');
       const actualizacion = dolar.date;
