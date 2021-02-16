@@ -8,7 +8,7 @@
 
 <!-- - 💻📲 enlace a la aplicacion: [toDoList](https://augusto-rossetti-lorea.000webhostapp.com/) -->
 
-- 💻📲 enlace a la aplicacion: [toDoList](https://bigote97.github.io/final-js/)
+- 💻📲 enlace a la aplicacion: [Notas](https://bigote97.github.io/final-js/)
 
 
 <h3 align="center">Lenguajes y herramientas utilizados:</h3>
