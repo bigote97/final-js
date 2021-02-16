@@ -12,8 +12,12 @@ const botonModal = document.querySelector("#botonModal");
 const modal = document.querySelector("#modal");
 const botonBorrar = document.querySelector('#botonBorrar');
 const cerrarModal = document.querySelector("#cerrarModal");
+const child1Modal = document.querySelector("#modalH2");
+const child2Modal = document.querySelector("#modalp");
+const child3Modal = document.querySelector("#modalp2");
 let items = [];
 let lista = [];
+let modalOpen = false;
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -65,9 +69,17 @@ document.querySelector('#inputTipo').addEventListener('keydown', function (e) {
 })
 
 function crearLista(){
-  const nombre = document.querySelector('#inputTitulo').value;
+  const nombre = document.querySelector('#inputTitulo');
+  if (nombre.value === ''){
+    nombre.focus();
+    nombre.style.border = '3px solid red';
+    nombre.placeholder = 'campo obligatorio';
+    return
+  }
+  nombre.style.border = '0.8px solid black';
+  nombre.placeholder = 'titulo';
   const tipo = document.querySelector('#inputTipo').value;  
-  set(nombre, tipo, items);
+  set(nombre.value, tipo, items);
   while (listaItems.firstChild) {
     listaItems.removeChild(listaItems.firstChild);
   };
@@ -92,7 +104,7 @@ function show(){
   limpiarLista();
   lista.forEach(function callback(element, index){
     const card = document.createElement('div');
-    card.classList.add('col-sm-12', 'col-md-6', 'col-lg-3', 'col-xl-3');
+    card.classList.add('col-sm-12', 'col-md-6', 'col-lg-3', 'col-xl-4');
     
     if (element.tipo === '0'){
       card.innerHTML = `
@@ -149,17 +161,19 @@ function borrarCard(id) {
 }
 
 botonModal.addEventListener('click', function() {
-  modal.style.display = "block"
+  modal.style.display = "block";
+  modalOpen = true;
 })
 cerrarModal.addEventListener('click', function() {
-  modal.style.display = "none"
+  modal.style.display = "none";
+  modalOpen = false;
 })
 window.onclick = function(event) {
-  if (event.target == modal) {
+  
+  if (event.target !== modal && event.target !== child1Modal && event.target !== child2Modal && event.target !== child3Modal && event.target !== botonModal )  {
     modal.style.display = "none";
   }
 }
-
 
 function borrarLista() {  
   while (contenedorLista.firstChild) {
@@ -169,4 +183,5 @@ function borrarLista() {
   listaJSON = JSON.stringify(lista);
   localStorage.setItem('listaJSON', listaJSON);
   modal.style.display = "none"
+  modalOpen = false;
 };

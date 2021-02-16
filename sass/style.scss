@@ -34,6 +34,7 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px !important;
   @include tarjeta(610px, 100%, 20px, 0, 80%);
   .tools-card-maker{
     @include tarjeta(200px, 80%, 15px, 30px, 80%);
@@ -78,7 +79,10 @@ header{
   }
   @media only screen and (max-width: 600px){
     @include tarjeta(150px, 100%, 15px, 10px, 0);
-    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  @media only screen and (min-width: 601px) and (max-width: 1000px){
+    margin-bottom: 30px;
   }
 }
 .modal{
@@ -91,6 +95,7 @@ header{
   height: 40%; 
   overflow: auto; 
   padding: 40px;
+  box-shadow: 8px 4px 8px 4px rgba(0,0,0,0.4);
   border: 1px solid;
   border-radius: 15px;
   background-color: #FFFFFF;
@@ -110,7 +115,7 @@ header{
     border: 0;
     border-radius: 0;
   }
-  @media only screen and (min-width: 600px) and (max-width: 1000px){
+  @media only screen and (min-width: 601px) and (max-width: 1000px){
     left: 0;
     top: 0;
     width: 100%; 

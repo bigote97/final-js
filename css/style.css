@@ -40,6 +40,7 @@ header a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px !important;
   position: relative;
   margin-bottom: 0;
   padding: 20px;
@@ -141,12 +142,17 @@ header a:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 13px;
     background-color: #FFFFFF;
-    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .info-card input, .info-card select {
     margin-bottom: 10px;
     border-radius: 5px;
     width: 0;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+  .info-card {
+    margin-bottom: 30px;
   }
 }
 
@@ -160,6 +166,7 @@ header a:hover {
   height: 40%;
   overflow: auto;
   padding: 40px;
+  box-shadow: 8px 4px 8px 4px rgba(0, 0, 0, 0.4);
   border: 1px solid;
   border-radius: 15px;
   background-color: #FFFFFF;
@@ -182,7 +189,7 @@ header a:hover {
     border-radius: 0;
   }
 }
-@media only screen and (min-width: 600px) and (max-width: 1000px) {
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
   .modal {
     left: 0;
     top: 0;
