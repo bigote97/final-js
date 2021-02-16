@@ -1,5 +1,5 @@
-<h1 align="center">Hola 👋, yo soy Augusto Rossetti Lorea</h1>
-<h3 align="center">Un apasianado desarrollador argentino</h3>
+<h1 align="center">Hola 👋, mi nombre es Augusto Rossetti Lorea</h1>
+<h3 align="center">So un apasianado desarrollador argentino</h3>
 <p>
   En este repositorio encontras la aplicacion web que estoy desarrollando en el curso de JavaScript dictado por Coderhouse.
   <br>
