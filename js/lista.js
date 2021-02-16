@@ -21,9 +21,13 @@ let modalOpen = false;
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  
   lista = JSON.parse(localStorage.getItem('listaJSON')) || [];
-  show();
+  if (lista.length === 0) {
+    botonModal.style.display = 'none';
+  } else {
+    botonModal.style.display = 'inline';
+    show();
+  }
 });
 
 document.querySelector('#inputItem').addEventListener('keydown', function (e) {
@@ -97,10 +101,12 @@ function set(name, tipo, item) {
     show();
     const listaJSON = JSON.stringify(lista);
     localStorage.setItem('listaJSON', listaJSON);
+    botonModal.style.display = 'inline';
   }
 };
 
 function show(){
+  
   limpiarLista();
   lista.forEach(function callback(element, index){
     const card = document.createElement('div');
@@ -165,6 +171,9 @@ function borrarCard(id) {
   listaJSON = JSON.stringify(lista);
   localStorage.setItem('listaJSON', listaJSON);
   show();
+  if (lista.length === 0) {
+    botonModal.style.display = 'none';
+  }
 }
 
 botonModal.addEventListener('click', function() {
@@ -190,5 +199,6 @@ function borrarLista() {
   listaJSON = JSON.stringify(lista);
   localStorage.setItem('listaJSON', listaJSON);
   modal.style.display = "none"
+  botonModal.style.display = 'none'
   modalOpen = false;
 };
