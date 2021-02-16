@@ -7,8 +7,11 @@ function elemento(nombre,tipo,items) {
 const contenedorLista = document.querySelector('#lista');
 const boton = document.querySelector('#crearLista');
 const crearItem = document.querySelector('#crearItem');
-const botonBorrar = document.querySelector('#botonBorrar');
 const listaItems = document.querySelector('#listaItems');
+const botonModal = document.querySelector("#botonModal");
+const modal = document.querySelector("#modal");
+const botonBorrar = document.querySelector('#botonBorrar');
+const cerrarModal = document.querySelector("#cerrarModal");
 let items = [];
 let lista = [];
 
@@ -145,7 +148,17 @@ function borrarCard(id) {
   show();
 }
 
-
+botonModal.addEventListener('click', function() {
+  modal.style.display = "block"
+})
+cerrarModal.addEventListener('click', function() {
+  modal.style.display = "none"
+})
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
 
 function borrarLista() {  
@@ -155,4 +168,5 @@ function borrarLista() {
   lista = [];
   listaJSON = JSON.stringify(lista);
   localStorage.setItem('listaJSON', listaJSON);
+  modal.style.display = "none"
 };
