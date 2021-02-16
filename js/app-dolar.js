@@ -17,7 +17,7 @@ function peticion(){
       const actualizacion = dolar.date;
       p.innerHTML = `
         <p>
-          Valores consultados en <a href="https://api.exchangerate-api.com">https://api.exchangerate-api.comgit</a> y actualizado: ${actualizacion}
+          Valores consultados en <a href="https://api.exchangerate-api.com">API consulta</a> y actualizado: ${actualizacion}
         </p>
       `
       infoDolar.appendChild(p);
