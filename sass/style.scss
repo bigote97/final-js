@@ -37,7 +37,16 @@ header{
   margin-bottom: 20px !important;
   @include tarjeta(610px, 100%, 20px, 0, 80%);
   .tools-card-maker{
-    @include tarjeta(200px, 80%, 15px, 30px, 80%);
+    @include tarjeta(200px, 80%, 15px, 30px, 93%);
+    .tools-card-maker-items{
+      width: 70% !important;
+      @media only screen and (max-width: 600px){
+        width: 77% !important;
+      }
+      @media only screen and (min-width: 601px) and (max-width: 1000px){
+        width: 83% !important;
+      }
+    }
     .tools-card-maker-boton{
       position: absolute;
       bottom: 15px;

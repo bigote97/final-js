@@ -68,7 +68,20 @@ header a:hover {
 .tools-card .tools-card-maker input, .tools-card .tools-card-maker select {
   margin-bottom: 10px;
   border-radius: 5px;
-  width: 80%;
+  width: 93%;
+}
+.tools-card .tools-card-maker .tools-card-maker-items {
+  width: 70% !important;
+}
+@media only screen and (max-width: 600px) {
+  .tools-card .tools-card-maker .tools-card-maker-items {
+    width: 77% !important;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+  .tools-card .tools-card-maker .tools-card-maker-items {
+    width: 83% !important;
+  }
 }
 .tools-card .tools-card-maker .tools-card-maker-boton {
   position: absolute;

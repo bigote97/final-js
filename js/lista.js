@@ -137,6 +137,13 @@ function show(){
       `
       itemsCard.appendChild(ul)
     })
+    if (element.items.length < 1){
+      const ul = document.createElement('p');
+      ul.innerHTML = `
+        No hay elementos en esta lista
+      `
+      itemsCard.appendChild(ul)
+    }
   });
 };
 
